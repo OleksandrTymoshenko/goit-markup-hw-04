@@ -291,9 +291,6 @@ ul {
   height: 251px;
   justify-content: center;
   width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
 }
 
 .features-item::before {
@@ -336,7 +333,6 @@ ul {
 }
 
 .list-title {
-  margin-right: 30px;
   margin-bottom: 10px;
   font-style: normal;
   font-weight: bold;
@@ -373,7 +369,7 @@ ul {
   margin-top: 50px;
 }
 
-.products-item {
+.products-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -409,9 +405,12 @@ ul {
   margin-top: 50px;
 }
 
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .team-item {
   background-color: var(--white-bgc-text-color);
-  margin-right: 30px;
   border-radius: 5px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -489,9 +488,12 @@ ul {
 }
 
 .clients-item {
-  margin-right: 30px;
   width: 170px;
   height: 92px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .client-link {
@@ -631,11 +633,11 @@ ul {
 }
 
 .footerjoin-text {
-  font-family: Roboto;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
   line-height: 1.33;
-  color: var(--white-bgc-text-color);
   margin-bottom: 20px;
 }
 
@@ -645,16 +647,8 @@ ul {
 
 .footer-socialitem {
   margin-right: 10px;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
-  fill: var(--white-bgc-text-color);
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-sociallink {
@@ -664,10 +658,12 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  fill: var(--white-bgc-text-color);
   background-color: var(--footer-social-bgc);
 }
 
+.icon-join {
+  fill: var(--white-bgc-text-color);
+}
 .footer-sociallink:hover,
 .footer-sociallink:focus {
   background-color: var(--accent-color);
